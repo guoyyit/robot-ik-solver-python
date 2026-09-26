@@ -1,8 +1,5 @@
-from fastapi import FastAPI
+"""Application entry point: ``uv run uvicorn main:app``."""
 
-app = FastAPI()
+from ik_service.api import create_app
 
-
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
+app = create_app()
